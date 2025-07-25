@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Photo album - 202405 SPb trip</title>
+      <link rel="stylesheet" href="../public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="../public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="../public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="../public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="../public/core.css" />
+      <link rel="stylesheet" href="../public/theme.css" />
+      <link rel="stylesheet" href="../public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="../index.html">Photo album</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="../index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="202405-SPb-trip.html">202405 SPb trip</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+            <a href="202405-SPb-trip-20240519-SPbWalk.html">
+              <img src="../media/small/202405%20SPb%20trip/20240519%20SPbWalk/DSC04690.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20240519 SPbWalk</h3>
+                <div class="summary">21 photos</div>
+              </div>
+            </a>
+            <a href="202405-SPb-trip-20240520-NabeWa.html">
+              <img src="../media/small/202405%20SPb%20trip/20240520%20Nabe%40Wa/DSC04893.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20240520 Nabe@Wa</h3>
+                <div class="summary">31 photos</div>
+              </div>
+            </a>
+            <a href="202405-SPb-trip-20240521-Shtiglic%2C-Mozaichnyj-dvorik.html">
+              <img src="../media/small/202405%20SPb%20trip/20240521%20%D0%A8%D1%82%D0%B8%D0%B3%D0%BB%D0%B8%D1%86%2C%20%D0%9C%D0%BE%D0%B7%D0%B0%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B4%D0%B2%D0%BE%D1%80%D0%B8%D0%BA/DSC04992.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20240521 Штиглиц, Мозаичный дворик</h3>
+                <div class="summary">51 photos</div>
+              </div>
+            </a>
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+      </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="../public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="../public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="../public/lightgallery/js/lightgallery.js"></script>
+    <script src="../public/lightslider/js/lightslider.min.js"></script>
+    <script src="../public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="../public/lightgallery/js/lg-pager.js"></script>
+    <script src="../public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="../public/lightgallery/js/lg-video.js"></script>
+    <script src="../public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="../public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+
+  </body>
+
+</html>

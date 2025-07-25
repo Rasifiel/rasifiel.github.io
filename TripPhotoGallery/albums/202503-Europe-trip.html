@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Photo album - 202503 Europe trip</title>
+      <link rel="stylesheet" href="../public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="../public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="../public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="../public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="../public/core.css" />
+      <link rel="stylesheet" href="../public/theme.css" />
+      <link rel="stylesheet" href="../public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="../index.html">Photo album</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="../index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="202503-Europe-trip.html">202503 Europe trip</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+            <a href="202503-Europe-trip-20250313-Paris-Montparnase-Tour.html">
+              <img src="../media/small/202503%20Europe%20trip/20250313%20Paris%20Montparnase%20Tour/DSC09185.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250313 Paris Montparnase Tour</h3>
+                <div class="summary">72 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250314-Mont-Saint-Michele.html">
+              <img src="../media/small/202503%20Europe%20trip/20250314%20Mont-Saint-Michele/DSC09455.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250314 Mont-Saint-Michele</h3>
+                <div class="summary">66 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250317-Tours%2C-Angers.html">
+              <img src="../media/small/202503%20Europe%20trip/20250317%20Tours%2C%20Angers/DSC00064.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250317 Tours, Angers</h3>
+                <div class="summary">29 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250318-Rouen.html">
+              <img src="../media/small/202503%20Europe%20trip/20250318%20Rouen/DSC00554.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250318 Rouen</h3>
+                <div class="summary">47 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250319-Paris-Sacre-Coeur-Basilica%2C-3-museums.html">
+              <img src="../media/small/202503%20Europe%20trip/20250319%20Paris%20-%20Sacr%C3%A9-C%C5%93ur%20Basilica%2C%203%20museums/DSC03334.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250319 Paris - Sacré-Cœur Basilica, 3 museums</h3>
+                <div class="summary">306 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250320-Bern.html">
+              <img src="../media/small/202503%20Europe%20trip/20250320%20Bern/DSC01457-2.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250320 Bern</h3>
+                <div class="summary">15 photos</div>
+              </div>
+            </a>
+            <a href="202503-Europe-trip-20250321-Murren%2C-Schlithorn%2C-Piz-Gloria%2C-Lauterbrunnen.html">
+              <img src="../media/small/202503%20Europe%20trip/20250321%20Murren%2C%20Schlithorn%2C%20Piz%20Gloria%2C%20Lauterbrunnen/DSC01558.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250321 Murren, Schlithorn, Piz Gloria, Lauterbrunnen</h3>
+                <div class="summary">31 photos</div>
+              </div>
+            </a>
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+      </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="../public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="../public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="../public/lightgallery/js/lightgallery.js"></script>
+    <script src="../public/lightslider/js/lightslider.min.js"></script>
+    <script src="../public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="../public/lightgallery/js/lg-pager.js"></script>
+    <script src="../public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="../public/lightgallery/js/lg-video.js"></script>
+    <script src="../public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="../public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+
+  </body>
+
+</html>

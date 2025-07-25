@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Photo album - 202506 Japan trip</title>
+      <link rel="stylesheet" href="../public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="../public/lightslider/css/lightslider.min.css" />
+      <link rel="stylesheet" href="../public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="../public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="../public/core.css" />
+      <link rel="stylesheet" href="../public/theme.css" />
+      <link rel="stylesheet" href="../public/justifiedgallery/justifiedGallery.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="container">
+    
+      <!--
+        Gallery title
+      -->
+      <header>
+        <h1><a href="../index.html">Photo album</a></h1>
+      </header>
+    
+      <!--
+        Breadcrumbs of parent albums
+      -->
+      <nav class="breadcrumbs">
+    <a class="breadcrumb-item" href="../index.html">Home</a>&nbsp;/&nbsp;<a class="breadcrumb-item" href="202506-Japan-trip.html">202506 Japan trip</a>
+      </nav>
+    
+    
+      <!--
+        Nested albums, if any
+      -->
+      <div id="albums" class="justified-gallery">
+            <a href="202506-Japan-trip-20250608-Kamakura%2C-Enoshima.html">
+              <img src="../media/small/202506%20Japan%20trip/20250608%20Kamakura%2C%20Enoshima/DSC04003.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250608 Kamakura, Enoshima</h3>
+                <div class="summary">37 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250609-Nikko.html">
+              <img src="../media/small/202506%20Japan%20trip/20250609%20Nikko/DSC04315.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250609 Nikko</h3>
+                <div class="summary">50 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250610-Goshikinuma-ponds%2C-Inawashiro.html">
+              <img src="../media/small/202506%20Japan%20trip/20250610%20Goshikinuma%20ponds%2C%20Inawashiro/DSC04678.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250610 Goshikinuma ponds, Inawashiro</h3>
+                <div class="summary">27 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250611-Akiu-onsen%2C-Rairaikyo-gorge.html">
+              <img src="../media/small/202506%20Japan%20trip/20250611%20Akiu%20onsen%2C%20Rairaikyo%20gorge/DSC04924.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250611 Akiu onsen, Rairaikyo gorge</h3>
+                <div class="summary">21 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250612-Matsushima.html">
+              <img src="../media/small/202506%20Japan%20trip/20250612%20Matsushima/DSC05174.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250612 Matsushima</h3>
+                <div class="summary">34 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250614-SmileFest.html">
+              <img src="../media/small/202506%20Japan%20trip/20250614%20SmileFest/DSC05505.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250614 SmileFest</h3>
+                <div class="summary">92 photos</div>
+              </div>
+            </a>
+            <a href="202506-Japan-trip-20250616-Hakusan-shrine%2C-University-of-Tokyo-campus.html">
+              <img src="../media/small/202506%20Japan%20trip/20250616%20Hakusan%20shrine%2C%20University%20of%20Tokyo%20campus/DSC05796.jpg" alt="">
+              <div class="caption" style="display: inline-block">
+                <h3>20250616 Hakusan shrine, University of Tokyo campus</h3>
+                <div class="summary">17 photos</div>
+              </div>
+            </a>
+      </div>
+    
+      <!--
+        All photos and videos
+      -->
+      <ul id="media" class="clearfix justified-gallery">
+      </ul>
+    
+      <!--
+        Pagination
+      -->
+    
+      <!--
+        Zip file link
+      -->
+    
+      <!--
+        Optional footer
+      -->
+    
+    </div>
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="../public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="../public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="../public/lightgallery/js/lightgallery.js"></script>
+    <script src="../public/lightslider/js/lightslider.min.js"></script>
+    <script src="../public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="../public/lightgallery/js/lg-pager.js"></script>
+    <script src="../public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="../public/lightgallery/js/lg-video.js"></script>
+    <script src="../public/lightgallery/js/lg-exif.min.js"></script>
+    <script src="../public/justifiedgallery/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true,
+          exThumbImage: 'data-exthumbimage',
+        });
+
+        // Init justified gallery for albums
+        $("#albums").justifiedGallery({
+          margins: 10,
+          rowHeight: 300,
+          maxRowHeight: 325,
+        });
+
+        // Init justified gallery for photos
+        $("#media").justifiedGallery({
+          selector: '.albumList',
+          waitThumbnailsLoad: false,
+          margins: 10,
+          rowHeight: 250,
+          maxRowHeight: 275,
+        });
+      });
+    </script>
+
+
+
+  </body>
+
+</html>
